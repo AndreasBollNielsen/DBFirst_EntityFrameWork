@@ -12,9 +12,10 @@ namespace DBFirst_EntityFrameWork
         static void Main(string[] args)
         {
 
-            //show data from database
+            //get data from database
             var flightroutes = controller.GetFlightRoutes();
 
+            //loop through items for proof of concept that this stuff really works (sometimes).
             foreach (var item in flightroutes)
             {
                 Console.WriteLine($"flight id {item.FlightRoute_Id} From  {item.MyAirport.name} To {item.MyAirport1.name}");
